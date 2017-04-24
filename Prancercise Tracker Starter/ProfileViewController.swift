@@ -69,16 +69,6 @@ class ProfileViewController: UITableViewController {
     print("TODO: save BMI sample")
   }
   
-  // MARK: - utility methods
-  func bmiWithWeightInKilograms(_ weightInKilograms:Double, heightInMeters:Double) -> Double? {
-    
-    guard heightInMeters != 0 else {
-      return nil
-    }
-    
-    return (weightInKilograms/(heightInMeters*heightInMeters))
-  }
-  
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     guard let section = ProfileSection(rawValue: indexPath.section) else {
