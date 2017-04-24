@@ -20,10 +20,10 @@
  * THE SOFTWARE.
  */
 
-import Foundation
+import HealthKit
 
-class HealthManager {
+class HealthKitSetupAssistant {
   
-  static let shared = HealthManager()
+  
   
 }

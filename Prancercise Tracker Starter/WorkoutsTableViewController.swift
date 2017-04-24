@@ -35,7 +35,6 @@ class WorkoutsTableViewController: UITableViewController {
   }
   
   var distanceUnit = DistanceUnit.miles
-  var healthManager:HealthManager?
   
   // MARK: - Formatters
   lazy var dateFormatter:DateFormatter = {

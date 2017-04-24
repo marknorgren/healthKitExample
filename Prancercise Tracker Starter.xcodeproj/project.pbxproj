@@ -12,7 +12,7 @@
 		AC1BA51A1EAE5D2F00C99FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BA5181EAE5D2F00C99FE3 /* LaunchScreen.storyboard */; };
 		AC1BA5281EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5211EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift */; };
 		AC1BA52A1EAE5E2200C99FE3 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5231EAE5E2200C99FE3 /* DatePickerCell.swift */; };
-		AC1BA52B1EAE5E2200C99FE3 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */; };
+		AC1BA52B1EAE5E2200C99FE3 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5241EAE5E2200C99FE3 /* HealthKitSetupAssistant.swift */; };
 		AC1BA52C1EAE5E2200C99FE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5251EAE5E2200C99FE3 /* MasterViewController.swift */; };
 		AC1BA52D1EAE5E2200C99FE3 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5261EAE5E2200C99FE3 /* NumberCell.swift */; };
 		AC1BA52E1EAE5E2200C99FE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5271EAE5E2200C99FE3 /* ProfileViewController.swift */; };
@@ -22,6 +22,7 @@
 		AC8EABDD1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABDC1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift */; };
 		AC8EABE01EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABDF1EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift */; };
 		AC8EABE21EAEA368002DD041 /* BMICalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABE11EAEA368002DD041 /* BMICalculator.swift */; };
+		AC8EABE41EAEA622002DD041 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABE31EAEA622002DD041 /* ProfileDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +33,7 @@
 		AC1BA51B1EAE5D2F00C99FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC1BA5211EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWorkoutTableViewController.swift; sourceTree = "<group>"; };
 		AC1BA5231EAE5E2200C99FE3 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
-		AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		AC1BA5241EAE5E2200C99FE3 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitSetupAssistant.swift; sourceTree = "<group>"; };
 		AC1BA5251EAE5E2200C99FE3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		AC1BA5261EAE5E2200C99FE3 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		AC1BA5271EAE5E2200C99FE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		AC8EABDC1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBloodType+StringRepresentation.swift"; sourceTree = "<group>"; };
 		AC8EABDF1EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBiologicalSex+StringRepresentation.swift"; sourceTree = "<group>"; };
 		AC8EABE11EAEA368002DD041 /* BMICalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMICalculator.swift; sourceTree = "<group>"; };
+		AC8EABE31EAEA622002DD041 /* ProfileDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,8 @@
 				AC1BA5321EAE5EA600C99FE3 /* Cells */,
 				AC8EABDB1EAE88DB002DD041 /* Models */,
 				AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */,
-				AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */,
+				AC1BA5241EAE5E2200C99FE3 /* HealthKitSetupAssistant.swift */,
+				AC8EABE31EAEA622002DD041 /* ProfileDataStore.swift */,
 				AC8EABE11EAEA368002DD041 /* BMICalculator.swift */,
 				AC8EABDE1EAE9B56002DD041 /* HealthKit Extensions */,
 				AC1BA5131EAE5D2F00C99FE3 /* Main.storyboard */,
@@ -200,13 +203,14 @@
 			files = (
 				AC8EABD81EAE72AF002DD041 /* AppDelegate.swift in Sources */,
 				AC8EABDD1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift in Sources */,
-				AC1BA52B1EAE5E2200C99FE3 /* HealthManager.swift in Sources */,
+				AC1BA52B1EAE5E2200C99FE3 /* HealthKitSetupAssistant.swift in Sources */,
 				AC1BA52D1EAE5E2200C99FE3 /* NumberCell.swift in Sources */,
 				AC8EABE21EAEA368002DD041 /* BMICalculator.swift in Sources */,
 				AC1BA5281EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift in Sources */,
 				AC1BA52E1EAE5E2200C99FE3 /* ProfileViewController.swift in Sources */,
 				AC8EABDA1EAE88D6002DD041 /* Workout.swift in Sources */,
 				AC1BA5311EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift in Sources */,
+				AC8EABE41EAEA622002DD041 /* ProfileDataStore.swift in Sources */,
 				AC8EABE01EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */,
 				AC1BA52C1EAE5E2200C99FE3 /* MasterViewController.swift in Sources */,
 				AC1BA52A1EAE5E2200C99FE3 /* DatePickerCell.swift in Sources */,
