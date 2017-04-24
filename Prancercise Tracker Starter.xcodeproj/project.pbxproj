@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC1BA5101EAE5D2F00C99FE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA50F1EAE5D2F00C99FE3 /* AppDelegate.swift */; };
-		AC1BA5121EAE5D2F00C99FE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5111EAE5D2F00C99FE3 /* ViewController.swift */; };
 		AC1BA5151EAE5D2F00C99FE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BA5131EAE5D2F00C99FE3 /* Main.storyboard */; };
 		AC1BA5171EAE5D2F00C99FE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1BA5161EAE5D2F00C99FE3 /* Assets.xcassets */; };
 		AC1BA51A1EAE5D2F00C99FE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1BA5181EAE5D2F00C99FE3 /* LaunchScreen.storyboard */; };
+		AC1BA5281EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5211EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift */; };
+		AC1BA52A1EAE5E2200C99FE3 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5231EAE5E2200C99FE3 /* DatePickerCell.swift */; };
+		AC1BA52B1EAE5E2200C99FE3 /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */; };
+		AC1BA52C1EAE5E2200C99FE3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5251EAE5E2200C99FE3 /* MasterViewController.swift */; };
+		AC1BA52D1EAE5E2200C99FE3 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5261EAE5E2200C99FE3 /* NumberCell.swift */; };
+		AC1BA52E1EAE5E2200C99FE3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5271EAE5E2200C99FE3 /* ProfileViewController.swift */; };
+		AC1BA5311EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5301EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift */; };
+		AC8EABD81EAE72AF002DD041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */; };
+		AC8EABDA1EAE88D6002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABD91EAE88D6002DD041 /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC1BA50C1EAE5D2F00C99FE3 /* Prancercise Tracker Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prancercise Tracker Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC1BA50F1EAE5D2F00C99FE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC1BA5111EAE5D2F00C99FE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC1BA5141EAE5D2F00C99FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1BA5161EAE5D2F00C99FE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC1BA5191EAE5D2F00C99FE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC1BA51B1EAE5D2F00C99FE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC1BA5211EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateWorkoutTableViewController.swift; sourceTree = "<group>"; };
+		AC1BA5231EAE5E2200C99FE3 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		AC1BA5251EAE5E2200C99FE3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AC1BA5261EAE5E2200C99FE3 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
+		AC1BA5271EAE5E2200C99FE3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AC1BA5301EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
+		AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC8EABD91EAE88D6002DD041 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,45 @@
 		AC1BA50E1EAE5D2F00C99FE3 /* Prancercise Tracker Starter */ = {
 			isa = PBXGroup;
 			children = (
-				AC1BA50F1EAE5D2F00C99FE3 /* AppDelegate.swift */,
-				AC1BA5111EAE5D2F00C99FE3 /* ViewController.swift */,
+				AC1BA52F1EAE5E5400C99FE3 /* View Controllers */,
+				AC1BA5321EAE5EA600C99FE3 /* Cells */,
+				AC8EABDB1EAE88DB002DD041 /* Models */,
+				AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */,
+				AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */,
 				AC1BA5131EAE5D2F00C99FE3 /* Main.storyboard */,
 				AC1BA5161EAE5D2F00C99FE3 /* Assets.xcassets */,
 				AC1BA5181EAE5D2F00C99FE3 /* LaunchScreen.storyboard */,
 				AC1BA51B1EAE5D2F00C99FE3 /* Info.plist */,
 			);
 			path = "Prancercise Tracker Starter";
+			sourceTree = "<group>";
+		};
+		AC1BA52F1EAE5E5400C99FE3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC1BA5251EAE5E2200C99FE3 /* MasterViewController.swift */,
+				AC1BA5271EAE5E2200C99FE3 /* ProfileViewController.swift */,
+				AC1BA5301EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift */,
+				AC1BA5211EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AC1BA5321EAE5EA600C99FE3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AC1BA5261EAE5E2200C99FE3 /* NumberCell.swift */,
+				AC1BA5231EAE5E2200C99FE3 /* DatePickerCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		AC8EABDB1EAE88DB002DD041 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC8EABD91EAE88D6002DD041 /* Workout.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +181,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC1BA5121EAE5D2F00C99FE3 /* ViewController.swift in Sources */,
-				AC1BA5101EAE5D2F00C99FE3 /* AppDelegate.swift in Sources */,
+				AC8EABD81EAE72AF002DD041 /* AppDelegate.swift in Sources */,
+				AC1BA52B1EAE5E2200C99FE3 /* HealthManager.swift in Sources */,
+				AC1BA52D1EAE5E2200C99FE3 /* NumberCell.swift in Sources */,
+				AC1BA5281EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift in Sources */,
+				AC1BA52E1EAE5E2200C99FE3 /* ProfileViewController.swift in Sources */,
+				AC8EABDA1EAE88D6002DD041 /* Workout.swift in Sources */,
+				AC1BA5311EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift in Sources */,
+				AC1BA52C1EAE5E2200C99FE3 /* MasterViewController.swift in Sources */,
+				AC1BA52A1EAE5E2200C99FE3 /* DatePickerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Prancercise Tracker Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "razeware.Prancercise-Tracker-Starter";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Razeware.Prancercise-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -276,7 +328,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Prancercise Tracker Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "razeware.Prancercise-Tracker-Starter";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Razeware.Prancercise-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -301,6 +353,7 @@
 				AC1BA5201EAE5D2F00C99FE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
