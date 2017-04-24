@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AC1BA50B1EAE5D2F00C99FE3"
-               BuildableName = "Prancercise Tracker Starter.app"
-               BlueprintName = "Prancercise Tracker Starter"
-               ReferencedContainer = "container:Prancercise Tracker Starter.xcodeproj">
+               BuildableName = "Prancercise Tracker.app"
+               BlueprintName = "Prancercise Tracker"
+               ReferencedContainer = "container:Prancercise Tracker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC1BA50B1EAE5D2F00C99FE3"
-            BuildableName = "Prancercise Tracker Starter.app"
-            BlueprintName = "Prancercise Tracker Starter"
-            ReferencedContainer = "container:Prancercise Tracker Starter.xcodeproj">
+            BuildableName = "Prancercise Tracker.app"
+            BlueprintName = "Prancercise Tracker"
+            ReferencedContainer = "container:Prancercise Tracker.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC1BA50B1EAE5D2F00C99FE3"
-            BuildableName = "Prancercise Tracker Starter.app"
-            BlueprintName = "Prancercise Tracker Starter"
-            ReferencedContainer = "container:Prancercise Tracker Starter.xcodeproj">
+            BuildableName = "Prancercise Tracker.app"
+            BlueprintName = "Prancercise Tracker"
+            ReferencedContainer = "container:Prancercise Tracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AC1BA50B1EAE5D2F00C99FE3"
-            BuildableName = "Prancercise Tracker Starter.app"
-            BlueprintName = "Prancercise Tracker Starter"
-            ReferencedContainer = "container:Prancercise Tracker Starter.xcodeproj">
+            BuildableName = "Prancercise Tracker.app"
+            BlueprintName = "Prancercise Tracker"
+            ReferencedContainer = "container:Prancercise Tracker.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
