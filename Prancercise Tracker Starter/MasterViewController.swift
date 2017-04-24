@@ -26,26 +26,19 @@ import UIKit
 
 class MasterViewController: UITableViewController {
   
-  let kAuthorizeHealthKitSection = 2
+  let authorizeHealthKitSection = 2
   
-  func authorizeHealthKit()
-  {
-    print("TODO: Request HealthKit authorization")
+  func authorizeHealthKit() {
+    
   }
   
   // MARK: - TableView Delegate
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-    switch (indexPath.section, indexPath.row)
-    {
-    case (kAuthorizeHealthKitSection,0):
+    if indexPath.section == authorizeHealthKitSection {
       authorizeHealthKit()
-    default:
-      break
     }
-    self.tableView.deselectRow(at: indexPath, animated: true)
+    
   }
-  
-  
   
 }

@@ -79,7 +79,7 @@ class DatePickerCell: UITableViewCell {
   
   func updateDateTimeLabel() {
     
-    var dateText = ""
+    var dateText: String?
     let date = datePicker.date
     
     switch inputMode {
@@ -90,7 +90,7 @@ class DatePickerCell: UITableViewCell {
     default: break
     }
     
-    detailTextLabel?.text = dateText;
+    detailTextLabel?.text = dateText
   }
   
   func datePickerValueChanged( ) {

@@ -24,127 +24,74 @@ import UIKit
 import HealthKit
 
 class ProfileViewController: UITableViewController {
+    
+  private enum ProfileSection: Int {
+    case ageSexBloodType
+    case weightHeightBMI
+    case readHealthKitData
+    case saveBMI
+  }
   
-  let UpdateProfileInfoSection = 2
-  let SaveBMISection = 3
-  let kUnknownString   = "Unknown"
+  @IBOutlet private var ageLabel:UILabel!
+  @IBOutlet private var bloodTypeLabel:UILabel!
+  @IBOutlet private var biologicalSexLabel:UILabel!
+  @IBOutlet private var weightLabel:UILabel!
+  @IBOutlet private var heightLabel:UILabel!
+  @IBOutlet private var bmiLabel:UILabel!
   
-  @IBOutlet var ageLabel:UILabel!
-  @IBOutlet var bloodTypeLabel:UILabel!
-  @IBOutlet var biologicalSexLabel:UILabel!
-  @IBOutlet var weightLabel:UILabel!
-  @IBOutlet var heightLabel:UILabel!
-  @IBOutlet var bmiLabel:UILabel!
-  
-  var healthManager:HealthManager?
-  var bmi:Double?
+  private var bmi:Double?
   
   func updateHealthInfo() {
     
-    updateProfileInfo()
+    readProfileInfoFromHealthKit()
     updateWeight()
     updateHeight()
     
   }
   
-  func updateProfileInfo()
-  {
+  func readProfileInfoFromHealthKit() {
     print("TODO: update profile Information")
   }
   
-  func updateHeight()
-  {
+  func updateHeight() {
     print("TODO: update Height")
   }
   
-  func updateWeight()
-  {
+  func updateWeight() {
     print("TODO: update Weight")
   }
   
-  func updateBMI()
-  {
+  func updateBMI() {
     print("TODO: update BMI")
   }
   
   func saveBMI() {
     print("TODO: save BMI sample")
   }
+  
   // MARK: - utility methods
-  func calculateBMIWithWeightInKilograms(_ weightInKilograms:Double, heightInMeters:Double) -> Double?
-  {
-    if heightInMeters == 0 {
-      return nil;
-    }
-    return (weightInKilograms/(heightInMeters*heightInMeters));
-  }
-  
-  
-  func biologicalSexLiteral(_ biologicalSex:HKBiologicalSex?)->String
-  {
-    var biologicalSexText = kUnknownString;
+  func bmiWithWeightInKilograms(_ weightInKilograms:Double, heightInMeters:Double) -> Double? {
     
-    if  biologicalSex != nil {
-      
-      switch( biologicalSex! )
-      {
-      case .female:
-        biologicalSexText = "Female"
-      case .male:
-        biologicalSexText = "Male"
-      default:
-        break;
-      }
-      
+    guard heightInMeters != 0 else {
+      return nil
     }
-    return biologicalSexText;
-  }
-  
-  func bloodTypeLiteral(_ bloodType:HKBloodType?)->String
-  {
     
-    var bloodTypeText = kUnknownString;
-    
-    if bloodType != nil {
-      
-      switch( bloodType! ) {
-      case .aPositive:
-        bloodTypeText = "A+"
-      case .aNegative:
-        bloodTypeText = "A-"
-      case .bPositive:
-        bloodTypeText = "B+"
-      case .bNegative:
-        bloodTypeText = "B-"
-      case .abPositive:
-        bloodTypeText = "AB+"
-      case .abNegative:
-        bloodTypeText = "AB-"
-      case .oPositive:
-        bloodTypeText = "O+"
-      case .oNegative:
-        bloodTypeText = "O-"
-      default:
-        break;
-      }
-      
-    }
-    return bloodTypeText;
+    return (weightInKilograms/(heightInMeters*heightInMeters))
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath , animated: true)
     
-    switch (indexPath.section, indexPath.row)
-    {
-    case (UpdateProfileInfoSection,0):
-      updateHealthInfo()
-    case (SaveBMISection,0):
-      saveBMI()
-    default:
-      break;
+    guard let section = ProfileSection(rawValue: indexPath.section) else {
+      fatalError("A ProfileSection should map to the index path's section")
     }
     
+    switch section {
+    case .saveBMI:
+      saveBMI()
+    case .readHealthKitData:
+      updateHealthInfo()
+    default: break
+    }
     
   }
   

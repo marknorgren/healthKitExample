@@ -37,7 +37,7 @@
                         <sections>
                             <tableViewSection id="LGV-C9-hbj">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="E2Z-eu-6sj" style="IBUITableViewCellStyleDefault" id="za4-jR-xcd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="E2Z-eu-6sj" style="IBUITableViewCellStyleDefault" id="za4-jR-xcd">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="za4-jR-xcd" id="kV8-j0-ryw">
@@ -62,7 +62,7 @@
                             </tableViewSection>
                             <tableViewSection id="Hgv-On-oIb">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="hkx-fX-ScT" style="IBUITableViewCellStyleDefault" id="pbr-HY-7Fd">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="hkx-fX-ScT" style="IBUITableViewCellStyleDefault" id="pbr-HY-7Fd">
                                         <rect key="frame" x="0.0" y="99" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pbr-HY-7Fd" id="AF0-F1-iyl">
@@ -87,7 +87,7 @@
                             </tableViewSection>
                             <tableViewSection id="ACd-C8-6iP">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="2pz-XF-uhl" style="IBUITableViewCellStyleDefault" id="m0d-ak-lc9">
                                         <rect key="frame" x="0.0" y="163" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m0d-ak-lc9" id="d3P-M7-ByW">
@@ -190,7 +190,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcI-M0-1S5" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lI8-8Q-PHg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="410"/>
+            <point key="canvasLocation" x="2087" y="396"/>
         </scene>
         <!--Add Workout View Controller-->
         <scene sceneID="USo-7g-WFs">
@@ -390,7 +390,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTL-Tc-O5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2953" y="410"/>
+            <point key="canvasLocation" x="2881" y="396"/>
         </scene>
         <!--Profile & BMI-->
         <scene sceneID="yW2-54-FD7">
@@ -612,7 +612,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iq9-kh-VGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="-290"/>
+            <point key="canvasLocation" x="1366" y="-295"/>
         </scene>
         <!--aa-->
         <scene sceneID="UWU-0G-Ke1">
@@ -630,7 +630,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMx-yB-yOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1291" y="401"/>
+            <point key="canvasLocation" x="1366" y="396"/>
         </scene>
     </scenes>
 </document>

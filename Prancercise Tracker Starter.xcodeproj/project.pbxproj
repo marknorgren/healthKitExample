@@ -19,6 +19,8 @@
 		AC1BA5311EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1BA5301EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift */; };
 		AC8EABD81EAE72AF002DD041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */; };
 		AC8EABDA1EAE88D6002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABD91EAE88D6002DD041 /* Workout.swift */; };
+		AC8EABDD1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABDC1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift */; };
+		AC8EABE01EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABDF1EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AC1BA5301EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutsTableViewController.swift; sourceTree = "<group>"; };
 		AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC8EABD91EAE88D6002DD041 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		AC8EABDC1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBloodType+StringRepresentation.swift"; sourceTree = "<group>"; };
+		AC8EABDF1EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HKBiologicalSex+StringRepresentation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				AC8EABDB1EAE88DB002DD041 /* Models */,
 				AC8EABD71EAE72AF002DD041 /* AppDelegate.swift */,
 				AC1BA5241EAE5E2200C99FE3 /* HealthManager.swift */,
+				AC8EABDE1EAE9B56002DD041 /* HealthKit Extensions */,
 				AC1BA5131EAE5D2F00C99FE3 /* Main.storyboard */,
 				AC1BA5161EAE5D2F00C99FE3 /* Assets.xcassets */,
 				AC1BA5181EAE5D2F00C99FE3 /* LaunchScreen.storyboard */,
@@ -107,6 +112,15 @@
 				AC8EABD91EAE88D6002DD041 /* Workout.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		AC8EABDE1EAE9B56002DD041 /* HealthKit Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC8EABDC1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift */,
+				AC8EABDF1EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift */,
+			);
+			name = "HealthKit Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,12 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8EABD81EAE72AF002DD041 /* AppDelegate.swift in Sources */,
+				AC8EABDD1EAE9AAA002DD041 /* HKBloodType+StringRepresentation.swift in Sources */,
 				AC1BA52B1EAE5E2200C99FE3 /* HealthManager.swift in Sources */,
 				AC1BA52D1EAE5E2200C99FE3 /* NumberCell.swift in Sources */,
 				AC1BA5281EAE5E2200C99FE3 /* CreateWorkoutTableViewController.swift in Sources */,
 				AC1BA52E1EAE5E2200C99FE3 /* ProfileViewController.swift in Sources */,
 				AC8EABDA1EAE88D6002DD041 /* Workout.swift in Sources */,
 				AC1BA5311EAE5E7D00C99FE3 /* WorkoutsTableViewController.swift in Sources */,
+				AC8EABE01EAE9B85002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */,
 				AC1BA52C1EAE5E2200C99FE3 /* MasterViewController.swift in Sources */,
 				AC1BA52A1EAE5E2200C99FE3 /* DatePickerCell.swift in Sources */,
 			);
