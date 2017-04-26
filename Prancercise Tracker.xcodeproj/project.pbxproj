@@ -15,7 +15,6 @@
 		AC8EABF01EAEA855002DD041 /* WorkoutsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABEC1EAEA855002DD041 /* WorkoutsTableViewController.swift */; };
 		AC8EABF21EAEA860002DD041 /* HealthKitSetupAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF11EAEA860002DD041 /* HealthKitSetupAssistant.swift */; };
 		AC8EABF41EAEA86A002DD041 /* ProfileDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF31EAEA86A002DD041 /* ProfileDataStore.swift */; };
-		AC8EABF61EAEA875002DD041 /* BMICalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF51EAEA875002DD041 /* BMICalculator.swift */; };
 		AC8EABF91EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF71EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift */; };
 		AC8EABFA1EAEA895002DD041 /* HKBloodType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF81EAEA895002DD041 /* HKBloodType+StringRepresentation.swift */; };
 		AC8EABFD1EAEA8B2002DD041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8EABFB1EAEA8B2002DD041 /* Main.storyboard */; };
@@ -24,6 +23,7 @@
 		AC8EAC051EAEA8DA002DD041 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC031EAEA8DA002DD041 /* DatePickerCell.swift */; };
 		AC8EAC061EAEA8DA002DD041 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC041EAEA8DA002DD041 /* NumberCell.swift */; };
 		AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC071EAEA8E5002DD041 /* Workout.swift */; };
+		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,6 @@
 		AC8EABEC1EAEA855002DD041 /* WorkoutsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutsTableViewController.swift; path = "Prancercise Tracker/WorkoutsTableViewController.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABF11EAEA860002DD041 /* HealthKitSetupAssistant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HealthKitSetupAssistant.swift; path = "Prancercise Tracker/HealthKitSetupAssistant.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABF31EAEA86A002DD041 /* ProfileDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileDataStore.swift; path = "Prancercise Tracker/ProfileDataStore.swift"; sourceTree = SOURCE_ROOT; };
-		AC8EABF51EAEA875002DD041 /* BMICalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMICalculator.swift; path = "Prancercise Tracker/BMICalculator.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABF71EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKBiologicalSex+StringRepresentation.swift"; path = "Prancercise Tracker/HKBiologicalSex+StringRepresentation.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABF81EAEA895002DD041 /* HKBloodType+StringRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "HKBloodType+StringRepresentation.swift"; path = "Prancercise Tracker/HKBloodType+StringRepresentation.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABFC1EAEA8B2002DD041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Prancercise Tracker/Base.lproj/Main.storyboard"; sourceTree = SOURCE_ROOT; };
@@ -45,6 +44,7 @@
 		AC8EAC031EAEA8DA002DD041 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatePickerCell.swift; path = "Prancercise Tracker/DatePickerCell.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EAC041EAEA8DA002DD041 /* NumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NumberCell.swift; path = "Prancercise Tracker/NumberCell.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EAC071EAEA8E5002DD041 /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = "Prancercise Tracker/Workout.swift"; sourceTree = SOURCE_ROOT; };
+		ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHealthProfile.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,6 @@
 				AC8EABE71EAEA83F002DD041 /* AppDelegate.swift */,
 				AC8EABF11EAEA860002DD041 /* HealthKitSetupAssistant.swift */,
 				AC8EABF31EAEA86A002DD041 /* ProfileDataStore.swift */,
-				AC8EABF51EAEA875002DD041 /* BMICalculator.swift */,
 				AC8EABDE1EAE9B56002DD041 /* HealthKit Extensions */,
 				AC8EABE51EAEA833002DD041 /* Assets.xcassets */,
 				AC8EABFB1EAEA8B2002DD041 /* Main.storyboard */,
@@ -118,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8EAC071EAEA8E5002DD041 /* Workout.swift */,
+				ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -205,11 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8EABFA1EAEA895002DD041 /* HKBloodType+StringRepresentation.swift in Sources */,
-				AC8EABF61EAEA875002DD041 /* BMICalculator.swift in Sources */,
 				AC8EABF01EAEA855002DD041 /* WorkoutsTableViewController.swift in Sources */,
 				AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */,
 				AC8EABF21EAEA860002DD041 /* HealthKitSetupAssistant.swift in Sources */,
 				AC8EABF41EAEA86A002DD041 /* ProfileDataStore.swift in Sources */,
+				ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */,
 				AC8EABE81EAEA83F002DD041 /* AppDelegate.swift in Sources */,
 				AC8EABEE1EAEA855002DD041 /* MasterViewController.swift in Sources */,
 				AC8EABEF1EAEA855002DD041 /* ProfileViewController.swift in Sources */,

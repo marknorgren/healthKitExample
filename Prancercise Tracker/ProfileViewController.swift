@@ -37,10 +37,8 @@ class ProfileViewController: UITableViewController {
   @IBOutlet private var biologicalSexLabel:UILabel!
   @IBOutlet private var weightLabel:UILabel!
   @IBOutlet private var heightLabel:UILabel!
-  @IBOutlet private var bmiLabel:UILabel!
-  
-  private var bmi:Double?
-  
+  @IBOutlet private var bodyMassIndexLabel:UILabel!
+    
   func updateHealthInfo() {
     
     readProfileInfoFromHealthKit()

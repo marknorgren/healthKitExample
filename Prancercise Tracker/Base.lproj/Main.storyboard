@@ -29,7 +29,7 @@
         <!--Main View Controller-->
         <scene sceneID="VgW-fR-Quf">
             <objects>
-                <tableViewController title="Master" id="pGg-6v-bdr" userLabel="Main View Controller" customClass="MasterViewController" customModule="Prancercise_Tracker_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" id="pGg-6v-bdr" userLabel="Main View Controller" customClass="MasterViewController" customModule="Prancercise_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mLL-gJ-YKr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,7 +123,7 @@
         <!--Workouts-->
         <scene sceneID="BPk-Kd-VMF">
             <objects>
-                <tableViewController id="FWb-oQ-HWR" customClass="WorkoutsTableViewController" customModule="Prancercise_Tracker_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="FWb-oQ-HWR" customClass="WorkoutsTableViewController" customModule="Prancercise_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GMZ-Nl-hKL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,7 +195,7 @@
         <!--Add Workout View Controller-->
         <scene sceneID="USo-7g-WFs">
             <objects>
-                <tableViewController title="Add Workout" id="nAQ-xo-Ipn" userLabel="Add Workout View Controller" customClass="CreateWorkoutTableViewController" customModule="Prancercise_Tracker_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Add Workout" id="nAQ-xo-Ipn" userLabel="Add Workout View Controller" customClass="CreateWorkoutTableViewController" customModule="Prancercise_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="vpq-cr-Mxc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,7 +203,7 @@
                         <sections>
                             <tableViewSection id="86c-zd-IfQ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addworkoutcell" textLabel="Si9-br-mTY" detailTextLabel="i43-ed-PHW" style="IBUITableViewCellStyleValue1" id="w5W-YQ-ETe" userLabel="Date Cell" customClass="DatePickerCell" customModule="Prancercise_Tracker_Starter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addworkoutcell" textLabel="Si9-br-mTY" detailTextLabel="i43-ed-PHW" style="IBUITableViewCellStyleValue1" id="w5W-YQ-ETe" userLabel="Date Cell" customClass="DatePickerCell" customModule="Prancercise_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w5W-YQ-ETe" id="g8i-YV-SAt">
@@ -227,7 +227,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addworkoutcell" textLabel="oxO-bN-Yba" detailTextLabel="3LT-0e-Eyn" style="IBUITableViewCellStyleValue1" id="GLD-Z4-9u8" userLabel="Start Time Cell" customClass="DatePickerCell" customModule="Prancercise_Tracker_Starter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="addworkoutcell" textLabel="oxO-bN-Yba" detailTextLabel="3LT-0e-Eyn" style="IBUITableViewCellStyleValue1" id="GLD-Z4-9u8" userLabel="Start Time Cell" customClass="DatePickerCell" customModule="Prancercise_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="79" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GLD-Z4-9u8" id="iB0-CV-32a">
@@ -251,7 +251,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="e3L-ZX-1ub" userLabel="Duration Cell" customClass="NumberCell" customModule="Prancercise_Tracker_Starter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="e3L-ZX-1ub" userLabel="Duration Cell" customClass="NumberCell" customModule="Prancercise_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="123" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e3L-ZX-1ub" id="oVq-GJ-yjm">
@@ -290,7 +290,7 @@
                             </tableViewSection>
                             <tableViewSection id="8PI-M7-QNh">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="GpJ-dJ-7G8" userLabel="Distance Cell" customClass="NumberCell" customModule="Prancercise_Tracker_Starter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="GpJ-dJ-7G8" userLabel="Distance Cell" customClass="NumberCell" customModule="Prancercise_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="187" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GpJ-dJ-7G8" id="TjI-pv-YUc">
@@ -325,7 +325,7 @@
                                             <outlet property="numberTextField" destination="mg4-1t-SC0" id="BBf-VC-pUA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="z6F-gO-L40" userLabel="Calories Cell" customClass="NumberCell" customModule="Prancercise_Tracker_Starter" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="z6F-gO-L40" userLabel="Calories Cell" customClass="NumberCell" customModule="Prancercise_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="231" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z6F-gO-L40" id="1ZH-D7-E6G">
@@ -395,7 +395,7 @@
         <!--Profile & BMI-->
         <scene sceneID="yW2-54-FD7">
             <objects>
-                <tableViewController title="Profile &amp; BMI" id="O9A-PM-bbK" customClass="ProfileViewController" customModule="Prancercise_Tracker_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Profile &amp; BMI" id="O9A-PM-bbK" customClass="ProfileViewController" customModule="Prancercise_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EIl-zo-cjM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -605,7 +605,7 @@
                         <outlet property="ageLabel" destination="GGi-WG-2pc" id="0FS-pR-es3"/>
                         <outlet property="biologicalSexLabel" destination="RXG-jL-pfs" id="nwx-fw-Ohn"/>
                         <outlet property="bloodTypeLabel" destination="Iic-Va-VkL" id="QsS-OT-hJb"/>
-                        <outlet property="bmiLabel" destination="4oD-JH-oDZ" id="kiG-eD-L6t"/>
+                        <outlet property="bodyMassIndexLabel" destination="4oD-JH-oDZ" id="5cF-OB-TOL"/>
                         <outlet property="heightLabel" destination="AP4-jD-IvM" id="Itl-Fa-MON"/>
                         <outlet property="weightLabel" destination="DA6-m6-IJH" id="0ym-pp-CCP"/>
                     </connections>
