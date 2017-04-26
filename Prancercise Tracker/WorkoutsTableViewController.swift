@@ -19,9 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 import UIKit
-import HealthKit
 
 public enum DistanceUnit:Int {
   case miles=0, kilometers=1
@@ -41,13 +39,9 @@ class WorkoutsTableViewController: UITableViewController {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
     formatter.dateStyle = .medium
-    return formatter;
+    return formatter
   }()
-  
-  let durationFormatter = DateComponentsFormatter()
-  let energyFormatter = EnergyFormatter()
-  let distanceFormatter = LengthFormatter()
-  
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     self.clearsSelectionOnViewWillAppear = false

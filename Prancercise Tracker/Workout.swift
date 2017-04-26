@@ -26,11 +26,11 @@ struct Workout {
 
 class WorkoutBuilder {
   
-  class func createWorkout(workoutDate: Date?,
-                           workoutStartTime: Date?,
-                           durationInMinutes: Double?,
-                           distance: Double?,
-                           energyBurned: Double? ) -> Workout? {
+  class func makeWorkout(workoutDate: Date?,
+                         workoutStartTime: Date?,
+                         durationInMinutes: Double?,
+                         distance: Double?,
+                         energyBurned: Double? ) -> Workout? {
     
     guard let workoutDate = workoutDate,
       let workoutStartTime = workoutStartTime,
