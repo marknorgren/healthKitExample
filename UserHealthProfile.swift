@@ -8,7 +8,7 @@
 
 import HealthKit
 
-final class UserHealthProfile {
+class UserHealthProfile {
   
   var age: Int?
   var biologicalSex: HKBiologicalSex?

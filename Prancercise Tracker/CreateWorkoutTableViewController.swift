@@ -87,7 +87,7 @@ class CreateWorkoutTableViewController: UITableViewController {
 //MARK: DatePickerCellDelegate
 extension CreateWorkoutTableViewController: DatePickerCellDelegate {
   
-  func datePickerCell(cell: DatePickerCell, didSelect date: Date) {
+  func datePickerCell(_ cell: DatePickerCell, didSelect date: Date) {
     
     switch cell.inputMode {
     case .date:

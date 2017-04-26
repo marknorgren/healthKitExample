@@ -23,7 +23,7 @@
 import UIKit
 
 protocol DatePickerCellDelegate: class {
-  func datePickerCell(cell: DatePickerCell, didSelect date: Date)
+  func datePickerCell(_ cell: DatePickerCell, didSelect date: Date)
 }
 
 class DatePickerCell: UITableViewCell {
@@ -95,7 +95,7 @@ class DatePickerCell: UITableViewCell {
   
   func datePickerValueChanged( ) {
     updateDateTimeLabel()
-    delegate?.datePickerCell(cell: self, didSelect: datePicker.date)
+    delegate?.datePickerCell(self, didSelect: datePicker.date)
   }
   
   override var canBecomeFirstResponder : Bool {
