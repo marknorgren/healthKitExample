@@ -42,29 +42,25 @@ class ProfileViewController: UITableViewController {
   private let userHealthProfile = UserHealthProfile()
   
   func updateHealthInfo() {
-    readProfileInfoFromHealthKit()
-    updateWeight()
-    updateHeight()
+    loadAndDisplayAgeSexAndBloodType()
+    loadAndDisplayMostRecentWeight()
+    loadAndDisplayMostRecentHeight()
   }
   
-  func readProfileInfoFromHealthKit() {
-    print("TODO: update profile Information")
+  func loadAndDisplayAgeSexAndBloodType() {
+
   }
   
-  func updateHeight() {
-    print("TODO: update Height")
+  func loadAndDisplayMostRecentHeight() {
+
   }
   
-  func updateWeight() {
-    print("TODO: update Weight")
+  func loadAndDisplayMostRecentWeight() {
+
   }
   
-  func updateBMI() {
-    print("TODO: update BMI")
-  }
-  
-  func saveBMI() {
-    print("TODO: save BMI sample")
+  func saveBodyMassIndexToHealthKit() {
+    
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -75,7 +71,7 @@ class ProfileViewController: UITableViewController {
     
     switch section {
     case .saveBMI:
-      saveBMI()
+      saveBodyMassIndexToHealthKit()
     case .readHealthKitData:
       updateHealthInfo()
     default: break

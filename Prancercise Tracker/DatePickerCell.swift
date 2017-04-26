@@ -95,6 +95,7 @@ class DatePickerCell: UITableViewCell {
   
   func datePickerValueChanged( ) {
     updateDateTimeLabel()
+    delegate?.datePickerCell(cell: self, didSelect: datePicker.date)
   }
   
   override var canBecomeFirstResponder : Bool {
