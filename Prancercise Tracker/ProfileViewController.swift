@@ -38,13 +38,13 @@ class ProfileViewController: UITableViewController {
   @IBOutlet private var weightLabel:UILabel!
   @IBOutlet private var heightLabel:UILabel!
   @IBOutlet private var bodyMassIndexLabel:UILabel!
-    
+  
+  private let userHealthProfile = UserHealthProfile()
+  
   func updateHealthInfo() {
-    
     readProfileInfoFromHealthKit()
     updateWeight()
     updateHeight()
-    
   }
   
   func readProfileInfoFromHealthKit() {

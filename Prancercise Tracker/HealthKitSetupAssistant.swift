@@ -24,6 +24,9 @@ import HealthKit
 
 class HealthKitSetupAssistant {
   
-  
+  private enum HealthkitSetupError: Error {
+    case notAvailableOnDevice
+    case dataTypeNotAvailable
+  }
   
 }

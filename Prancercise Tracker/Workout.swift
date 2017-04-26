@@ -37,7 +37,7 @@ class WorkoutBuilder {
       let durationInMinutes = durationInMinutes,
       let distance = distance,
       let energyBurned = energyBurned else {
-        return nil
+      return nil
     }
     
     let startDate = workoutStartDateWith(workoutDate,

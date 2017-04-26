@@ -38,25 +38,19 @@ class WorkoutsTableViewController: UITableViewController {
   
   // MARK: - Formatters
   lazy var dateFormatter:DateFormatter = {
-    
     let formatter = DateFormatter()
     formatter.timeStyle = .short
     formatter.dateStyle = .medium
     return formatter;
-    
-    }()
+  }()
   
   let durationFormatter = DateComponentsFormatter()
   let energyFormatter = EnergyFormatter()
   let distanceFormatter = LengthFormatter()
   
-  // MARK: - Class Implementation
-  
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.clearsSelectionOnViewWillAppear = false
-    
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -72,7 +66,6 @@ class WorkoutsTableViewController: UITableViewController {
     tableView.reloadData()
   }
   
-  // MARK: - Segues
   @IBAction func unwindToWorkouts (_ segue : UIStoryboardSegue) {
     
     if  segue.identifier == WorkoutsSegues.finishedCreatingWorkout.rawValue {
