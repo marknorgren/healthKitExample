@@ -32,10 +32,10 @@ class WorkoutsTableViewController: UITableViewController {
     case finishedCreatingWorkout
   }
   
-  var distanceUnit = DistanceUnit.miles
+  private var distanceUnit = DistanceUnit.miles
   
   // MARK: - Formatters
-  lazy var dateFormatter:DateFormatter = {
+  private lazy var dateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
     formatter.dateStyle = .medium

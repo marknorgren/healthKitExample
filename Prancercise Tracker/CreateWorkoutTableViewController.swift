@@ -75,13 +75,22 @@ class CreateWorkoutTableViewController: UITableViewController {
   }
   
   fileprivate func updateWorkout() {
-    workout = WorkoutBuilder.makeWorkout(workoutDate: selectedWorkoutDate,
-                                         workoutStartTime: selectedWorkoutStartTime,
+    
+    var startHourAndMinute: DateComponents?
+    
+    if let selectedWorkoutStartTime = selectedWorkoutStartTime {
+      startHourAndMinute = Calendar
+                           .current
+                           .dateComponents([.hour, .minute],
+                                           from: selectedWorkoutStartTime)
+    }
+    
+    workout = WorkoutBuilder.makeWorkout(dateWorkoutOccurs: selectedWorkoutDate,
+                                         startHourAndMinute: startHourAndMinute,
                                          durationInMinutes: selectedWorkoutDurationInMinutes,
                                          distance: selectedWorkoutDistance,
-                                           energyBurned: selectedEnergyBurned)
+                                         energyBurned: selectedEnergyBurned)
   }
-  
 }
 
 //MARK: DatePickerCellDelegate

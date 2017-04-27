@@ -52,21 +52,21 @@ class DatePickerCell: UITableViewCell {
     updateDateTimeLabel()
   }
   
-  lazy var dateFormatter:DateFormatter = {
+  private lazy var dateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .none
     formatter.dateStyle = .medium
     return formatter
   }()
   
-  lazy var timeFormatter:DateFormatter = {
+  private lazy var timeFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
     formatter.dateStyle = .none
     return formatter
   }()
   
-  lazy var datePicker:UIDatePicker = {
+  private lazy var datePicker:UIDatePicker = {
     
     let picker = UIDatePicker()
     
@@ -77,7 +77,7 @@ class DatePickerCell: UITableViewCell {
     return picker
   }()
   
-  func updateDateTimeLabel() {
+  private func updateDateTimeLabel() {
     
     var dateText: String?
     let date = datePicker.date

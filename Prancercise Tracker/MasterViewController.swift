@@ -26,9 +26,9 @@ import UIKit
 
 class MasterViewController: UITableViewController {
   
-  let authorizeHealthKitSection = 2
+  private let authorizeHealthKitSection = 2
   
-  func authorizeHealthKit() {
+  private func authorizeHealthKit() {
     
   }
   

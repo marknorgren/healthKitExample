@@ -41,25 +41,25 @@ class ProfileViewController: UITableViewController {
   
   private let userHealthProfile = UserHealthProfile()
   
-  func updateHealthInfo() {
+  private func updateHealthInfo() {
     loadAndDisplayAgeSexAndBloodType()
     loadAndDisplayMostRecentWeight()
     loadAndDisplayMostRecentHeight()
   }
   
-  func loadAndDisplayAgeSexAndBloodType() {
+  private func loadAndDisplayAgeSexAndBloodType() {
 
   }
   
-  func loadAndDisplayMostRecentHeight() {
+  private func loadAndDisplayMostRecentHeight() {
 
   }
   
-  func loadAndDisplayMostRecentWeight() {
+  private func loadAndDisplayMostRecentWeight() {
 
   }
   
-  func saveBodyMassIndexToHealthKit() {
+  private func saveBodyMassIndexToHealthKit() {
     
   }
   
