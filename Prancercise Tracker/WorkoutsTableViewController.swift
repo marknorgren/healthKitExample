@@ -19,6 +19,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 import UIKit
 
 public enum DistanceUnit:Int {
@@ -34,7 +35,6 @@ class WorkoutsTableViewController: UITableViewController {
   
   private var distanceUnit = DistanceUnit.miles
   
-  // MARK: - Formatters
   private lazy var dateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
