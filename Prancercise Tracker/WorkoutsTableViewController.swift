@@ -70,5 +70,4 @@ class WorkoutsTableViewController: UITableViewController {
   private func saveWorkoutToHealthKit() {
     
   }
-  
 }

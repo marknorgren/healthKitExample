@@ -31,7 +31,6 @@ class NumberCell: UITableViewCell {
   @IBOutlet private var numberTextField:UITextField!
   
   weak var delegate: NumberCellDelegate?
-  
 }
 
 extension NumberCell: UITextFieldDelegate {

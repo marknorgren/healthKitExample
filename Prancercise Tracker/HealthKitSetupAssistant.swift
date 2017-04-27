@@ -28,5 +28,4 @@ class HealthKitSetupAssistant {
     case notAvailableOnDevice
     case dataTypeNotAvailable
   }
-  
 }

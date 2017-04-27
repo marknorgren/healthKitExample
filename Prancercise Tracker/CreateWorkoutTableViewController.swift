@@ -109,7 +109,6 @@ extension CreateWorkoutTableViewController: DatePickerCellDelegate {
     updateWorkout()
     updateOKButtonStatus()
   }
-  
 }
 
 //MARK: NumberCellDelegate
@@ -132,5 +131,4 @@ extension CreateWorkoutTableViewController: NumberCellDelegate {
     updateWorkout()
     updateOKButtonStatus()
   }
-  
 }

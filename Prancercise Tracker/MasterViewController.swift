@@ -38,7 +38,5 @@ class MasterViewController: UITableViewController {
     if indexPath.section == authorizeHealthKitSection {
       authorizeHealthKit()
     }
-    
   }
-  
 }

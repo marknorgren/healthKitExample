@@ -76,7 +76,5 @@ class ProfileViewController: UITableViewController {
       updateHealthInfo()
     default: break
     }
-    
   }
-  
 }
