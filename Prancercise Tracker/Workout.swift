@@ -30,24 +30,16 @@
 
 import Foundation
 
-struct Workout {
+struct PrancerciseWorkout {
   
   var start: Date
-  var durationInMinutes: Double
-  var distance: Double
+  var end: Date
 
-  init(start: Date, durationInMinutes: Double, distance: Double) {
+  init(start: Date, end: Date) {
     self.start = start
-    self.durationInMinutes = durationInMinutes
-    self.distance = distance
+    self.end = end
   }
     
-  var end: Date {
-    get {
-      let secondsInAMinute = 60.0
-      return start.addingTimeInterval(durationInMinutes*secondsInAMinute)
-    }
-  }
 }
 
 

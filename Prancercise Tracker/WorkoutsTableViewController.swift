@@ -41,8 +41,6 @@ class WorkoutsTableViewController: UITableViewController {
     case finishedCreatingWorkout
   }
   
-  private var distanceUnit = DistanceUnit.miles
-  
   private lazy var dateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
@@ -53,19 +51,6 @@ class WorkoutsTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.clearsSelectionOnViewWillAppear = false
-  }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  
-    if  segue.identifier == WorkoutsSegues.showCreateWorkout.rawValue,
-        let createWorkoutVC = segue.destination as? CreateWorkoutTableViewController {
-        createWorkoutVC.distanceUnit = distanceUnit
-    }
-  }
-  
-  @IBAction func unitsChanged(_ sender:UISegmentedControl) {
-    distanceUnit  = DistanceUnit(rawValue: sender.selectedSegmentIndex)!
-    tableView.reloadData()
   }
   
   @IBAction func unwindToWorkouts (_ segue : UIStoryboardSegue) {

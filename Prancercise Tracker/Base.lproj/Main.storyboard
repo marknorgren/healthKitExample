@@ -130,30 +130,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="8JZ-rj-WUm">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="671-4i-ERz">
-                                    <rect key="frame" x="108" y="8" width="159" height="29"/>
-                                    <segments>
-                                        <segment title="Miles"/>
-                                        <segment title="Kilometers"/>
-                                    </segments>
-                                    <connections>
-                                        <action selector="unitsChanged:" destination="FWb-oQ-HWR" eventType="valueChanged" id="ELU-1B-05j"/>
-                                    </connections>
-                                </segmentedControl>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="centerX" secondItem="671-4i-ERz" secondAttribute="centerX" id="AeA-dz-x1e"/>
-                                <constraint firstAttribute="centerY" secondItem="671-4i-ERz" secondAttribute="centerY" id="hnh-Os-Stk"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutcellid" textLabel="hh2-3f-qb6" detailTextLabel="tDW-5C-Yu7" style="IBUITableViewCellStyleSubtitle" id="MsJ-fw-QH3">
-                                <rect key="frame" x="0.0" y="66" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MsJ-fw-QH3" id="Qt8-tU-50h">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -282,6 +261,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="durationLabel" destination="04D-9t-IVW" id="3At-La-g2H"/>
+                        <outlet property="startTimeLabel" destination="CzL-Ps-qz0" id="0vs-69-Bca"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTL-Tc-O5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -32,7 +32,10 @@ import UIKit
 
 class CreateWorkoutTableViewController: UITableViewController {
   
-  private var workout: Workout?
+  @IBOutlet private var startTimeLabel: UILabel!
+  @IBOutlet private var durationLabel: UILabel!
+  
+  private var workout: PrancerciseWorkout?
   
   var distanceUnit = DistanceUnit.miles
   
@@ -49,19 +52,41 @@ class CreateWorkoutTableViewController: UITableViewController {
     
   }
   
+  //MARK: UITableView Datasource
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    if WorkoutSession.current.isActive {
+      return 2
+    } else {
+      return 0
+    }
+    
+  }
+  
   //MARK: UITableView Delegate
   override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    
+    var buttonTitle: String!
+    var buttonColor: UIColor!
+    
+    if WorkoutSession.current.isActive {
+      buttonTitle = "STOP PRANCERCISING"
+      buttonColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+    } else {
+      buttonTitle = "START PRANCERCISING!"
+      buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    }
     
     let buttonFrame = CGRect(x: 0, y: 0,
                              width: tableView.frame.size.width,
                              height: 44.0)
     
     let button = UIButton(frame: buttonFrame)
-    button.setTitle("START PRANCERCISING!", for: .normal)
+    button.setTitle(buttonTitle, for: .normal)
     button.addTarget(self,
                      action: #selector(startButtonPressed),
                      for: UIControlEvents.touchUpInside)
-    button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    button.backgroundColor = buttonColor
     return button
   }
   
@@ -69,13 +94,25 @@ class CreateWorkoutTableViewController: UITableViewController {
     return 44.0
   }
   
+  func beginWorkout() {
+    WorkoutSession.current.start()
+    tableView.reloadData()
+  }
+  
+  func finishWorkout() {
+    WorkoutSession.current.end()
+    tableView.reloadData()
+  }
+  
   func startButtonPressed() {
    
     let alert = UIAlertController(title: nil,
                                   message: "Start a Prancercise routine? (Get those ankle weights ready)", preferredStyle: .alert)
+    
     let yesAction = UIAlertAction(title: "Yes",
-                               style: .default,
-                               handler: nil)
+                                  style: .default) { (action) in
+                                  self.beginWorkout()
+    }
     
     let noAction = UIAlertAction(title: "No",
                                  style: .cancel,
