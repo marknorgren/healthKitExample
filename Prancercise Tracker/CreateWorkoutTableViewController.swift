@@ -32,49 +32,12 @@ import UIKit
 
 class CreateWorkoutTableViewController: UITableViewController {
   
-  @IBOutlet private var workoutDateCell: DatePickerCell!
-  @IBOutlet private var workoutStartTimeCell: DatePickerCell!
-  
-  @IBOutlet fileprivate var workoutDurationCell: NumberCell!
-  @IBOutlet fileprivate var workoutCaloriesCell: NumberCell!
-  @IBOutlet fileprivate var workoutDistanceCell: NumberCell!
-
   private var workout: Workout?
-  
-  fileprivate var selectedWorkoutDate: Date?
-  fileprivate var selectedWorkoutStartTime: Date?
-  fileprivate var selectedWorkoutDurationInMinutes: Double?
-  fileprivate var selectedWorkoutDistance: Double?
-  fileprivate var selectedEnergyBurned: Double?
   
   var distanceUnit = DistanceUnit.miles
   
   fileprivate func updateOKButtonStatus() {
     navigationItem.rightBarButtonItem?.isEnabled = workout == nil ? false:true
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    setupCells()
-  }
-  
-  private func setupCells() {
-    
-    workoutDateCell.inputMode = .date
-    workoutStartTimeCell.inputMode = .time
-    
-    workoutDateCell.delegate = self
-    workoutStartTimeCell.delegate = self
-    
-    workoutDurationCell.delegate = self
-    workoutCaloriesCell.delegate = self
-    workoutDistanceCell.delegate = self
-    
-    let formatter = LengthFormatter()
-    formatter.unitStyle = .long
-    let unit = distanceUnit == DistanceUnit.kilometers ? LengthFormatter.Unit.kilometer : LengthFormatter.Unit.mile
-    let unitString = formatter.unitString(fromValue: 2.0, unit: unit)
-    workoutDistanceCell.textLabel?.text = "Distance (" + unitString.capitalized + ")"
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -84,59 +47,44 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   fileprivate func updateWorkout() {
     
-    var startHourAndMinute: DateComponents?
-    
-    if let selectedWorkoutStartTime = selectedWorkoutStartTime {
-      startHourAndMinute = Calendar
-                           .current
-                           .dateComponents([.hour, .minute],
-                                           from: selectedWorkoutStartTime)
-    }
-    
-    workout = WorkoutBuilder.makeWorkout(dateWorkoutOccurs: selectedWorkoutDate,
-                                         startHourAndMinute: startHourAndMinute,
-                                         durationInMinutes: selectedWorkoutDurationInMinutes,
-                                         distance: selectedWorkoutDistance,
-                                         energyBurned: selectedEnergyBurned)
   }
-}
-
-//MARK: DatePickerCellDelegate
-extension CreateWorkoutTableViewController: DatePickerCellDelegate {
   
-  func datePickerCell(_ cell: DatePickerCell, didSelect date: Date) {
+  //MARK: UITableView Delegate
+  override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
     
-    switch cell.inputMode {
-    case .date:
-      selectedWorkoutDate = date
-    case .time:
-      selectedWorkoutStartTime = date
-    default: break
-    }
+    let buttonFrame = CGRect(x: 0, y: 0,
+                             width: tableView.frame.size.width,
+                             height: 44.0)
     
-    updateWorkout()
-    updateOKButtonStatus()
+    let button = UIButton(frame: buttonFrame)
+    button.setTitle("START PRANCERCISING!", for: .normal)
+    button.addTarget(self,
+                     action: #selector(startButtonPressed),
+                     for: UIControlEvents.touchUpInside)
+    button.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    return button
   }
-}
-
-//MARK: NumberCellDelegate
-extension CreateWorkoutTableViewController: NumberCellDelegate {
   
-  func numberCell(_ cell: NumberCell, valueDidChange newValue: Double) {
-    
-    if cell == workoutDurationCell {
-      selectedWorkoutDurationInMinutes = newValue
-    }
-    
-    else if cell == workoutCaloriesCell {
-      selectedEnergyBurned = newValue
-    }
-    
-    else if cell == workoutDistanceCell {
-      selectedWorkoutDistance = newValue
-    }
-    
-    updateWorkout()
-    updateOKButtonStatus()
+  override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    return 44.0
   }
+  
+  func startButtonPressed() {
+   
+    let alert = UIAlertController(title: nil,
+                                  message: "Start a Prancercise routine? (Get those ankle weights ready)", preferredStyle: .alert)
+    let yesAction = UIAlertAction(title: "Yes",
+                               style: .default,
+                               handler: nil)
+    
+    let noAction = UIAlertAction(title: "No",
+                                 style: .cancel,
+                                 handler: nil)
+    
+    alert.addAction(yesAction)
+    alert.addAction(noAction)
+    
+    present(alert, animated: true, completion: nil)
+  }
+  
 }

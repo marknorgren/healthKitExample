@@ -35,8 +35,13 @@ struct Workout {
   var start: Date
   var durationInMinutes: Double
   var distance: Double
-  var energyBurned: Double?
-  
+
+  init(start: Date, durationInMinutes: Double, distance: Double) {
+    self.start = start
+    self.durationInMinutes = durationInMinutes
+    self.distance = distance
+  }
+    
   var end: Date {
     get {
       let secondsInAMinute = 60.0
@@ -45,37 +50,4 @@ struct Workout {
   }
 }
 
-class WorkoutBuilder {
-  
-  class func makeWorkout(dateWorkoutOccurs: Date?,
-                         startHourAndMinute: DateComponents?,
-                         durationInMinutes: Double?,
-                         distance: Double?,
-                         energyBurned: Double? ) -> Workout? {
-    
-    guard let dateWorkoutOccurs = dateWorkoutOccurs,
-          let startHourAndMinute = startHourAndMinute,
-          let durationInMinutes = durationInMinutes,
-          let distance = distance,
-          let energyBurned = energyBurned else {
-          return nil
-    }
-    
-    let currentCalendar = Calendar.current
-    
-    let baseDateComponents = currentCalendar.dateComponents([Calendar.Component.day,
-                                                             Calendar.Component.month,
-                                                             Calendar.Component.year],
-                                                            from: dateWorkoutOccurs)
-    
-    let baseDate = currentCalendar.date(from: baseDateComponents)!
-    
-    let start = currentCalendar.date(byAdding: startHourAndMinute,
-                                     to: baseDate)!
-    
-    return Workout(start: start,
-                   durationInMinutes: durationInMinutes,
-                   distance: distance,
-                   energyBurned: energyBurned)
-  }
-}
+
