@@ -54,11 +54,15 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   //MARK: UITableView Datasource
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    
-    if WorkoutSession.current.isActive {
+
+    switch WorkoutSession.current.state {
+      
+    case .active, .finished:
       return 2
-    } else {
+      
+    case .notStarted:
       return 0
+      
     }
     
   }
@@ -69,12 +73,20 @@ class CreateWorkoutTableViewController: UITableViewController {
     var buttonTitle: String!
     var buttonColor: UIColor!
     
-    if WorkoutSession.current.isActive {
+    switch WorkoutSession.current.state {
+      
+    case .active:
       buttonTitle = "STOP PRANCERCISING"
       buttonColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-    } else {
+      
+    case .notStarted:
       buttonTitle = "START PRANCERCISING!"
       buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+    
+    case .finished:
+      buttonTitle = "NEW PRANCERCISE"
+      buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+      
     }
     
     let buttonFrame = CGRect(x: 0, y: 0,
@@ -84,7 +96,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     let button = UIButton(frame: buttonFrame)
     button.setTitle(buttonTitle, for: .normal)
     button.addTarget(self,
-                     action: #selector(startButtonPressed),
+                     action: #selector(startStopButtonPressed),
                      for: UIControlEvents.touchUpInside)
     button.backgroundColor = buttonColor
     return button
@@ -104,8 +116,10 @@ class CreateWorkoutTableViewController: UITableViewController {
     tableView.reloadData()
   }
   
-  func startButtonPressed() {
+  func startStopButtonPressed() {
    
+    
+    
     let alert = UIAlertController(title: nil,
                                   message: "Start a Prancercise routine? (Get those ankle weights ready)", preferredStyle: .alert)
     

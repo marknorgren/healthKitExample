@@ -8,30 +8,36 @@
 
 import Foundation
 
+enum WorkoutSessionState {
+  case notStarted
+  case active
+  case finished
+}
+
 class WorkoutSession {
   
   static let current = WorkoutSession()
   
   private var startDate: Date!
   private var endDate: Date!
-  
-  private (set) var isActive: Bool = false
+
+  var state: WorkoutSessionState = .notStarted
   
   func start() {
     startDate = Date()
-    isActive = true
+    state = .active
   }
   
   func end() {
     endDate = Date()
-    isActive = false
+    state = .finished
   }
   
   var workout: PrancerciseWorkout? {
     
     get {
       
-      guard isActive == false,
+      guard state == .finished,
             let startDate = startDate,
             let endDate = endDate else {
             return nil
