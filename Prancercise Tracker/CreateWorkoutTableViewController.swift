@@ -35,12 +35,33 @@ class CreateWorkoutTableViewController: UITableViewController {
   @IBOutlet private var startTimeLabel: UILabel!
   @IBOutlet private var durationLabel: UILabel!
   
-  private var workout: PrancerciseWorkout?
+  private var timer:Timer!
   
-  var distanceUnit = DistanceUnit.miles
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    timer = Timer.scheduledTimer(withTimeInterval: 1,
+                                 repeats: true,
+                                 block: { (timer) in
+                                 self.updateLabels()
+    })
+  }
   
-  fileprivate func updateOKButtonStatus() {
-    navigationItem.rightBarButtonItem?.isEnabled = workout == nil ? false:true
+  private func updateOKButtonStatus() {
+    
+    var isEnabled = false
+    
+    switch WorkoutSession.current.state {
+
+    case .notStarted, .active:
+      isEnabled = false
+
+    case .finished:
+      isEnabled = true
+      
+    }
+    
+    navigationItem.rightBarButtonItem?.isEnabled = isEnabled
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +69,42 @@ class CreateWorkoutTableViewController: UITableViewController {
     updateOKButtonStatus()
   }
   
-  fileprivate func updateWorkout() {
+  private lazy var startTimeFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm"
+    return formatter
+  }()
+  
+  private lazy var durationFormatter: DateComponentsFormatter = {
+    let formatter = DateComponentsFormatter()
+    formatter.unitsStyle = .positional
+    formatter.allowedUnits = [.minute, .second]
+    formatter.zeroFormattingBehavior = [.pad]
+    return formatter
+  }()
+  
+  func updateLabels() {
+    
+    let session = WorkoutSession.current
+    
+    switch session.state {
+      
+    case .active:
+      startTimeLabel.text = startTimeFormatter.string(from: session.startDate)
+      let duration = Date().timeIntervalSince(session.startDate)
+      durationLabel.text = durationFormatter.string(from: duration)
+      
+    case .finished:
+      startTimeLabel.text = startTimeFormatter.string(from: session.startDate)
+      let duration = session.endDate.timeIntervalSince(session.startDate)
+      durationLabel.text = durationFormatter.string(from: duration)
+
+      
+    default:
+      startTimeLabel.text = nil
+      durationLabel.text = nil
+      
+    }
     
   }
   
@@ -108,24 +164,38 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   func beginWorkout() {
     WorkoutSession.current.start()
+    updateLabels()
     tableView.reloadData()
   }
   
   func finishWorkout() {
     WorkoutSession.current.end()
+    updateLabels()
     tableView.reloadData()
   }
   
   func startStopButtonPressed() {
-   
+
+    switch WorkoutSession.current.state {
+      
+    case .notStarted, .finished:
+      displayStartPrancerciseAlert()
+      
+    case .active:
+      finishWorkout()
+    }
     
+  }
+  
+  private func displayStartPrancerciseAlert() {
     
     let alert = UIAlertController(title: nil,
-                                  message: "Start a Prancercise routine? (Get those ankle weights ready)", preferredStyle: .alert)
+                                  message: "Start a Prancercise routine? (Get those ankle weights ready)",
+                                  preferredStyle: .alert)
     
     let yesAction = UIAlertAction(title: "Yes",
                                   style: .default) { (action) in
-                                  self.beginWorkout()
+                                    self.beginWorkout()
     }
     
     let noAction = UIAlertAction(title: "No",
@@ -136,6 +206,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     alert.addAction(noAction)
     
     present(alert, animated: true, completion: nil)
+    
   }
   
 }

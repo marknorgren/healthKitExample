@@ -18,8 +18,8 @@ class WorkoutSession {
   
   static let current = WorkoutSession()
   
-  private var startDate: Date!
-  private var endDate: Date!
+  private (set) var startDate: Date!
+  private (set) var endDate: Date!
 
   var state: WorkoutSessionState = .notStarted
   
@@ -33,7 +33,7 @@ class WorkoutSession {
     state = .finished
   }
   
-  var workout: PrancerciseWorkout? {
+  var completeWorkout: PrancerciseWorkout? {
     
     get {
       
