@@ -171,6 +171,7 @@ class CreateWorkoutTableViewController: UITableViewController {
   func finishWorkout() {
     WorkoutSession.current.end()
     updateLabels()
+    updateOKButtonStatus()
     tableView.reloadData()
   }
   
@@ -206,7 +207,6 @@ class CreateWorkoutTableViewController: UITableViewController {
     alert.addAction(noAction)
     
     present(alert, animated: true, completion: nil)
-    
   }
   
 }

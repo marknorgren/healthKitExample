@@ -164,7 +164,7 @@
                     <navigationItem key="navigationItem" title="Workouts" id="jAs-fu-MMx">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ux5-n1-Cbk">
                             <connections>
-                                <segue destination="nAQ-xo-Ipn" kind="show" id="Cpu-Cr-MGI"/>
+                                <segue destination="pGG-YN-WDh" kind="presentation" id="JfE-YE-uPg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -261,6 +261,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="durationLabel" destination="04D-9t-IVW" id="3At-La-g2H"/>
                         <outlet property="startTimeLabel" destination="CzL-Ps-qz0" id="0vs-69-Bca"/>
@@ -268,7 +269,23 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTL-Tc-O5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2161" y="400"/>
+            <point key="canvasLocation" x="2857" y="400"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ha4-5V-bHR">
+            <objects>
+                <navigationController id="pGG-YN-WDh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nQB-GE-UH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nAQ-xo-Ipn" kind="relationship" relationship="rootViewController" id="P3S-Vw-XtQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYO-2F-itu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2138" y="400"/>
         </scene>
         <!--Profile & BMI-->
         <scene sceneID="yW2-54-FD7">
