@@ -76,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				AC1BA52F1EAE5E5400C99FE3 /* View Controllers */,
-				AC1BA5321EAE5EA600C99FE3 /* Cells */,
 				AC8EABDB1EAE88DB002DD041 /* Models */,
 				AC8EABE71EAEA83F002DD041 /* AppDelegate.swift */,
 				AC8EABF11EAEA860002DD041 /* HealthKitSetupAssistant.swift */,
@@ -100,13 +99,6 @@
 				AC8EABEB1EAEA855002DD041 /* ProfileViewController.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		AC1BA5321EAE5EA600C99FE3 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Cells;
 			sourceTree = "<group>";
 		};
 		AC8EABDB1EAE88DB002DD041 /* Models */ = {
