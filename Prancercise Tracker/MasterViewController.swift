@@ -40,7 +40,7 @@ class MasterViewController: UITableViewController {
     
     HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
       
-      
+      print("TODO: Request HealthKit Authorization")
     }
     
   }
