@@ -37,12 +37,7 @@ class MasterViewController: UITableViewController {
   private let authorizeHealthKitSection = 2
   
   private func authorizeHealthKit() {
-    
-    HealthKitSetupAssistant.authorizeHealthKit { (authorized, error) in
-      
-      print("TODO: Request HealthKit Authorization")
-    }
-    
+    print("TODO: Request HealthKit Authorization")
   }
   
   // MARK: - UITableView Delegate
