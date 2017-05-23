@@ -59,6 +59,10 @@ class ProfileViewController: UITableViewController {
 
   }
   
+  private func updateLabels() {
+    
+  }
+  
   private func loadAndDisplayMostRecentHeight() {
 
   }
