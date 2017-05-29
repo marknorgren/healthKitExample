@@ -165,6 +165,7 @@ class CreateWorkoutTableViewController: UITableViewController {
   func beginWorkout() {
     WorkoutSession.current.start()
     updateLabels()
+    updateOKButtonStatus()
     tableView.reloadData()
   }
   
