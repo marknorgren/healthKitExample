@@ -1,32 +1,32 @@
 /**
-* Copyright (c) 2017 Razeware LLC
-*
-* Permission is hereby granted, free of charge, to any person obtaining a copy
-* of this software and associated documentation files (the "Software"), to deal
-* in the Software without restriction, including without limitation the rights
-* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-* copies of the Software, and to permit persons to whom the Software is
-* furnished to do so, subject to the following conditions:
-*
-* The above copyright notice and this permission notice shall be included in
-* all copies or substantial portions of the Software.
-*
-* Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-* distribute, sublicense, create a derivative work, and/or sell copies of the
-* Software in any work that is designed, intended, or marketed for pedagogical or
-* instructional purposes related to programming, coding, application development,
-* or information technology.  Permission for such use, copying, modification,
-* merger, publication, distribution, sublicensing, creation of derivative works,
-* or sale is expressly withheld.
-*
-* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-* THE SOFTWARE.
-*/
+ * Copyright (c) 2017 Razeware LLC
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
+ * distribute, sublicense, create a derivative work, and/or sell copies of the
+ * Software in any work that is designed, intended, or marketed for pedagogical or
+ * instructional purposes related to programming, coding, application development,
+ * or information technology.  Permission for such use, copying, modification,
+ * merger, publication, distribution, sublicensing, creation of derivative works,
+ * or sale is expressly withheld.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 import UIKit
 
@@ -37,13 +37,17 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   private var timer:Timer!
   
+  let finishedCreatingWorkoutSegueIdentifier = "finishedCreatingWorkout"
+  
+  var session = WorkoutSession()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     timer = Timer.scheduledTimer(withTimeInterval: 1,
                                  repeats: true,
                                  block: { (timer) in
-                                 self.updateLabels()
+                                  self.updateLabels()
     })
   }
   
@@ -51,11 +55,11 @@ class CreateWorkoutTableViewController: UITableViewController {
     
     var isEnabled = false
     
-    switch WorkoutSession.current.state {
-
+    switch session.state {
+      
     case .notStarted, .active:
       isEnabled = false
-
+      
     case .finished:
       isEnabled = true
       
@@ -66,6 +70,7 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    session.clear()
     updateOKButtonStatus()
   }
   
@@ -85,8 +90,6 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   func updateLabels() {
     
-    let session = WorkoutSession.current
-    
     switch session.state {
       
     case .active:
@@ -98,7 +101,7 @@ class CreateWorkoutTableViewController: UITableViewController {
       startTimeLabel.text = startTimeFormatter.string(from: session.startDate)
       let duration = session.endDate.timeIntervalSince(session.startDate)
       durationLabel.text = durationFormatter.string(from: duration)
-
+      
       
     default:
       startTimeLabel.text = nil
@@ -110,8 +113,8 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   //MARK: UITableView Datasource
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-    switch WorkoutSession.current.state {
+    
+    switch session.state {
       
     case .active, .finished:
       return 2
@@ -129,7 +132,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     var buttonTitle: String!
     var buttonColor: UIColor!
     
-    switch WorkoutSession.current.state {
+    switch session.state {
       
     case .active:
       buttonTitle = "STOP PRANCERCISING"
@@ -138,7 +141,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     case .notStarted:
       buttonTitle = "START PRANCERCISING!"
       buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-    
+      
     case .finished:
       buttonTitle = "NEW PRANCERCISE"
       buttonColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
@@ -163,22 +166,22 @@ class CreateWorkoutTableViewController: UITableViewController {
   }
   
   func beginWorkout() {
-    WorkoutSession.current.start()
+    session.start()
     updateLabels()
     updateOKButtonStatus()
     tableView.reloadData()
   }
   
   func finishWorkout() {
-    WorkoutSession.current.end()
+    session.end()
     updateLabels()
     updateOKButtonStatus()
     tableView.reloadData()
   }
   
   func startStopButtonPressed() {
-
-    switch WorkoutSession.current.state {
+    
+    switch session.state {
       
     case .notStarted, .finished:
       displayStartPrancerciseAlert()
@@ -191,12 +194,32 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   @IBAction func doneButtonPressed(sender: Any) {
     
+    guard let currentWorkout = session.completeWorkout else {
+      fatalError("Shouldn't be able to press the done button without a saved workout.")
+    }
+    
+    WorkoutDataStore.save(prancerciseWorkout: currentWorkout) { (success, error) in
+      
+      if success {
+        self.dismissAndRefreshWorkouts()
+      } else {
+        self.displayProblemSavingWorkoutAlert()
+      }
+      
+    }
+    
+  }
+  
+  private func dismissAndRefreshWorkouts() {
+    session.clear()
+    performSegue(withIdentifier: finishedCreatingWorkoutSegueIdentifier,
+                 sender: self)
   }
   
   private func displayStartPrancerciseAlert() {
     
     let alert = UIAlertController(title: nil,
-                                  message: "Start a Prancercise routine? (Get those ankle weights ready)",
+                                  message: "Start a Prancercise session? (Get those ankle weights ready)",
                                   preferredStyle: .alert)
     
     let yesAction = UIAlertAction(title: "Yes",
@@ -211,6 +234,20 @@ class CreateWorkoutTableViewController: UITableViewController {
     alert.addAction(yesAction)
     alert.addAction(noAction)
     
+    present(alert, animated: true, completion: nil)
+  }
+  
+  private func displayProblemSavingWorkoutAlert() {
+    
+    let alert = UIAlertController(title: nil,
+                                  message: "There was a problem saving your workout",
+                                  preferredStyle: .alert)
+    
+    let okayAction = UIAlertAction(title: "O.K.",
+                                   style: .default,
+                                   handler: nil)
+    
+    alert.addAction(okayAction)
     present(alert, animated: true, completion: nil)
   }
   
