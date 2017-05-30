@@ -189,6 +189,10 @@ class CreateWorkoutTableViewController: UITableViewController {
     
   }
   
+  @IBAction func doneButtonPressed(sender: Any) {
+    
+  }
+  
   private func displayStartPrancerciseAlert() {
     
     let alert = UIAlertController(title: nil,

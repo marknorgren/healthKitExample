@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9F270C321EBE47EB0075412F /* WorkoutSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F270C311EBE47EB0075412F /* WorkoutSession.swift */; };
+		AC891D731EDDBDC500A0F84A /* WorkoutDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC891D721EDDBDC500A0F84A /* WorkoutDataStore.swift */; };
 		AC8EABE61EAEA833002DD041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8EABE51EAEA833002DD041 /* Assets.xcassets */; };
 		AC8EABE81EAEA83F002DD041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABE71EAEA83F002DD041 /* AppDelegate.swift */; };
 		AC8EABED1EAEA855002DD041 /* CreateWorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABE91EAEA855002DD041 /* CreateWorkoutTableViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		9F270C311EBE47EB0075412F /* WorkoutSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutSession.swift; sourceTree = SOURCE_ROOT; };
 		AC1BA50C1EAE5D2F00C99FE3 /* Prancercise Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prancercise Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC891D721EDDBDC500A0F84A /* WorkoutDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkoutDataStore.swift; path = "Prancercise Tracker/WorkoutDataStore.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABE51EAEA833002DD041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Prancercise Tracker/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		AC8EABE71EAEA83F002DD041 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Prancercise Tracker/AppDelegate.swift"; sourceTree = SOURCE_ROOT; };
 		AC8EABE91EAEA855002DD041 /* CreateWorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateWorkoutTableViewController.swift; path = "Prancercise Tracker/CreateWorkoutTableViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -80,6 +82,7 @@
 				AC8EABE71EAEA83F002DD041 /* AppDelegate.swift */,
 				AC8EABF11EAEA860002DD041 /* HealthKitSetupAssistant.swift */,
 				AC8EABF31EAEA86A002DD041 /* ProfileDataStore.swift */,
+				AC891D721EDDBDC500A0F84A /* WorkoutDataStore.swift */,
 				AC8EABDE1EAE9B56002DD041 /* HealthKit Extensions */,
 				AC8EABE51EAEA833002DD041 /* Assets.xcassets */,
 				AC8EABFB1EAEA8B2002DD041 /* Main.storyboard */,
@@ -202,6 +205,7 @@
 				AC8EABF41EAEA86A002DD041 /* ProfileDataStore.swift in Sources */,
 				ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */,
 				AC8EABE81EAEA83F002DD041 /* AppDelegate.swift in Sources */,
+				AC891D731EDDBDC500A0F84A /* WorkoutDataStore.swift in Sources */,
 				AC8EABEE1EAEA855002DD041 /* MasterViewController.swift in Sources */,
 				AC8EABEF1EAEA855002DD041 /* ProfileViewController.swift in Sources */,
 				AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */,
