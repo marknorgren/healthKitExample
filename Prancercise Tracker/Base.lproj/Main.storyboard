@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutcellid" textLabel="hh2-3f-qb6" detailTextLabel="tDW-5C-Yu7" style="IBUITableViewCellStyleSubtitle" id="MsJ-fw-QH3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrancerciseWorkoutCell" textLabel="hh2-3f-qb6" detailTextLabel="tDW-5C-Yu7" style="IBUITableViewCellStyleSubtitle" id="MsJ-fw-QH3">
                                 <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MsJ-fw-QH3" id="Qt8-tU-50h">

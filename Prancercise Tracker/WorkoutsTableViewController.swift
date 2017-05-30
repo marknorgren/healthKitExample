@@ -29,10 +29,7 @@
  */
 
 import UIKit
-
-public enum DistanceUnit:Int {
-  case miles=0, kilometers=1
-}
+import HealthKit
 
 class WorkoutsTableViewController: UITableViewController {
   
@@ -41,13 +38,17 @@ class WorkoutsTableViewController: UITableViewController {
     case finishedCreatingWorkout
   }
   
-  private lazy var dateFormatter:DateFormatter = {
+  private var workouts: [HKWorkout]?
+  
+  private let prancerciseWorkoutCellID = "PrancerciseWorkoutCell"
+  
+  lazy var dateFormatter:DateFormatter = {
     let formatter = DateFormatter()
     formatter.timeStyle = .short
     formatter.dateStyle = .medium
     return formatter
   }()
-    
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     self.clearsSelectionOnViewWillAppear = false
@@ -56,11 +57,49 @@ class WorkoutsTableViewController: UITableViewController {
   @IBAction func unwindToWorkouts (_ segue : UIStoryboardSegue) {
     
     if  segue.identifier == WorkoutsSegues.finishedCreatingWorkout.rawValue {
-        saveWorkoutToHealthKit()
+      reloadWorkouts()
     }
   }
   
-  private func saveWorkoutToHealthKit() {
+  func reloadWorkouts() {
     
   }
+  
+  //MARK: UITableView DataSource
+  override func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    guard let workouts = workouts else {
+      return 0
+    }
+    
+    return workouts.count
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    guard let workouts = workouts else {
+      fatalError("CellForRowAtIndexPath should never get called if there are no workouts")
+    }
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: prancerciseWorkoutCellID,
+                                             for: indexPath)
+    
+    let workout = workouts[indexPath.row]
+    
+    cell.textLabel?.text = dateFormatter.string(from: workout.startDate)
+    
+    if let caloriesBurned = workout.totalEnergyBurned?.doubleValue(for: HKUnit.kilocalorie()) {
+      let formattedCalories = String(format: "CaloriesBurned: %.2f", caloriesBurned)
+      cell.detailTextLabel?.text = formattedCalories
+    } else {
+      cell.detailTextLabel?.text = nil
+    }
+    
+    return cell
+  }
+  
 }
