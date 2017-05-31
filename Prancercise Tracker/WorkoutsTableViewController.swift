@@ -54,11 +54,9 @@ class WorkoutsTableViewController: UITableViewController {
     self.clearsSelectionOnViewWillAppear = false
   }
   
-  @IBAction func unwindToWorkouts (_ segue : UIStoryboardSegue) {
-    
-    if  segue.identifier == WorkoutsSegues.finishedCreatingWorkout.rawValue {
-      reloadWorkouts()
-    }
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    reloadWorkouts()
   }
   
   func reloadWorkouts() {

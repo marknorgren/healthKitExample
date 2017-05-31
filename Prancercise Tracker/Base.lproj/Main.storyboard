@@ -170,7 +170,6 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kcI-M0-1S5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="lI8-8Q-PHg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1366" y="400"/>
         </scene>
@@ -252,13 +251,12 @@
                     <navigationItem key="navigationItem" title="New Workout" id="OT2-cr-kLJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tUA-pC-gFz">
                             <connections>
-                                <segue destination="lI8-8Q-PHg" kind="unwind" identifier="addWorkoutCancelSegue" unwindAction="unwindToWorkouts:" id="6hu-Qd-Xyf"/>
+                                <action selector="cancelButtonPressedWithSender:" destination="nAQ-xo-Ipn" id="0Za-8Y-5J5"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="a8G-TB-FyH">
                             <connections>
                                 <action selector="doneButtonPressedWithSender:" destination="nAQ-xo-Ipn" id="Q2K-aA-t5C"/>
-                                <segue destination="lI8-8Q-PHg" kind="unwind" identifier="finishedCreatingWorkout" unwindAction="unwindToWorkouts:" id="2Lh-PP-IKX"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

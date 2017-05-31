@@ -37,8 +37,6 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   private var timer:Timer!
   
-  let finishedCreatingWorkoutSegueIdentifier = "finishedCreatingWorkout"
-  
   var session = WorkoutSession()
   
   override func viewDidLoad() {
@@ -192,6 +190,10 @@ class CreateWorkoutTableViewController: UITableViewController {
     
   }
   
+  @IBAction func cancelButtonPressed(sender: Any) {
+    dismiss(animated: true, completion: nil)
+  }
+  
   @IBAction func doneButtonPressed(sender: Any) {
     
     guard let currentWorkout = session.completeWorkout else {
@@ -212,8 +214,7 @@ class CreateWorkoutTableViewController: UITableViewController {
   
   private func dismissAndRefreshWorkouts() {
     session.clear()
-    performSegue(withIdentifier: finishedCreatingWorkoutSegueIdentifier,
-                 sender: self)
+    dismiss(animated: true, completion: nil)
   }
   
   private func displayStartPrancerciseAlert() {
