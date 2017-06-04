@@ -75,6 +75,19 @@ class ProfileViewController: UITableViewController {
     
   }
   
+  private func displayAlert(for error: Error) {
+    
+    let alert = UIAlertController(title: nil,
+                                  message: error.localizedDescription,
+                                  preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "O.K.",
+                                  style: .default,
+                                  handler: nil))
+    
+    present(alert, animated: true, completion: nil)
+  }
+  
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     guard let section = ProfileSection(rawValue: indexPath.section) else {
