@@ -40,6 +40,18 @@ class ProfileViewController: UITableViewController {
     case saveBMI
   }
   
+  private enum ProfileDataError: Error {
+    
+    case missingBodyMassIndex
+    
+    var localizedDescription: String {
+      switch self {
+      case .missingBodyMassIndex:
+        return "Unable to calculate body mass index with available profile data."
+      }
+    }
+  }
+  
   @IBOutlet private var ageLabel:UILabel!
   @IBOutlet private var bloodTypeLabel:UILabel!
   @IBOutlet private var biologicalSexLabel:UILabel!
