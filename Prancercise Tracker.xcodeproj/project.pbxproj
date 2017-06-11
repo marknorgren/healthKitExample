@@ -20,7 +20,6 @@
 		AC8EABF91EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF71EAEA895002DD041 /* HKBiologicalSex+StringRepresentation.swift */; };
 		AC8EABFA1EAEA895002DD041 /* HKBloodType+StringRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EABF81EAEA895002DD041 /* HKBloodType+StringRepresentation.swift */; };
 		AC8EABFD1EAEA8B2002DD041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8EABFB1EAEA8B2002DD041 /* Main.storyboard */; };
-		AC8EAC021EAEA8C8002DD041 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC8EAC011EAEA8C8002DD041 /* Info.plist */; };
 		AC8EAC081EAEA8E5002DD041 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8EAC071EAEA8E5002DD041 /* Workout.swift */; };
 		ACF4F9201EB0FFED0031154C /* UserHealthProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4F91F1EB0FFED0031154C /* UserHealthProfile.swift */; };
 		ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACF4F9241EB215DE0031154C /* LaunchScreen.xib */; };
@@ -150,12 +149,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Razeware LLC";
 				TargetAttributes = {
 					AC1BA50B1EAE5D2F00C99FE3 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = N79LQXAXD6;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -184,7 +184,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF4F9261EB215DE0031154C /* LaunchScreen.xib in Resources */,
-				AC8EAC021EAEA8C8002DD041 /* Info.plist in Resources */,
 				AC8EABFD1EAEA8B2002DD041 /* Main.storyboard in Resources */,
 				AC8EABE61EAEA833002DD041 /* Assets.xcassets in Resources */,
 			);
@@ -245,7 +244,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -253,7 +254,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -296,7 +301,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -304,7 +311,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -339,7 +350,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Razeware.Prancercise-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -352,7 +364,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Razeware.Prancercise-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

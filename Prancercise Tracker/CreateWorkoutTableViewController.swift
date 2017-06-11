@@ -45,7 +45,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     timer = Timer.scheduledTimer(withTimeInterval: 1,
                                  repeats: true,
                                  block: { (timer) in
-                                  self.updateLabels()
+                                 self.updateLabels()
     })
   }
   
@@ -177,7 +177,7 @@ class CreateWorkoutTableViewController: UITableViewController {
     tableView.reloadData()
   }
   
-  func startStopButtonPressed() {
+  @objc func startStopButtonPressed() {
     
     switch session.state {
       
