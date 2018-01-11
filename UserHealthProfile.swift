@@ -32,11 +32,12 @@ import HealthKit
 
 class UserHealthProfile {
   
-  var age: Int?
+  var age: String?
   var biologicalSex: HKBiologicalSex?
   var bloodType: HKBloodType?
   var heightInMeters: Double?
   var weightInKilograms: Double?
+    var stepCount: Int?
   
   var bodyMassIndex: Double? {
     
